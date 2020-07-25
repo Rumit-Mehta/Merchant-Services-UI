@@ -7,7 +7,7 @@ const TwitterButton = () => {
   const styles = useTwitterBtnStyles();
   const mainStyles = usePushingGutterStyles({
     cssProp: "marginTop",
-    space: 2,
+    space: 5,
     firstExcluded: true,
   });
   const wrapperStyles = usePushingGutterStyles();
