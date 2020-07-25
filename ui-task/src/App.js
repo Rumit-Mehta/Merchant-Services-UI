@@ -1,9 +1,15 @@
 import React from "react";
 import "./App.css";
-import Button from "./Components/AssignServicesButton";
+import AssignServicesButton from "./Components/AssignServicesButton";
+import CancelButton from "./Components/CancelButton";
 
 function App() {
-  return <Button />;
+  return (
+    <div>
+      <AssignServicesButton />;
+      <CancelButton />;
+    </div>
+  );
 }
 
 export default App;
