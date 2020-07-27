@@ -1,6 +1,23 @@
 .headingDiv {
-  padding: 2% 0 0 20%;
   background-color: #f2fcff;
+  height: 125px;
+}
+
+.headingAccent {
+  background-color: #a2def9;
+  height: 85px;
+  width: 3px;
+  display: inline-block;
+  margin: 0 0 0 20%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.headingText {
+  display: inline-block;
+  position: relative;
+  top: 25px;
+  left: 10px;
 }
 
 #heading {
@@ -15,4 +32,8 @@
   font-family: "Mulish", sans-serif;
   font-size: 28px;
   color: #3282b8;
+}
+
+#button.table {
+  box-shadow: none;
 }
