@@ -2,10 +2,10 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import { useTwitterBtnStyles } from "@mui-treasury/styles/button/twitter";
 import { usePushingGutterStyles } from "@mui-treasury/styles/gutter/pushing";
-
 import { Alert, AlertTitle } from "@material-ui/lab";
 import Snackbar from "@material-ui/core/Snackbar";
 import { makeStyles } from "@material-ui/core/styles";
+import { newSelected } from "./ServicesTable";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,10 +24,6 @@ export default function SimpleSnackbar() {
   };
 
   const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
     setOpen(false);
   };
 
@@ -50,10 +46,10 @@ export default function SimpleSnackbar() {
         >
           Assign Services
         </Button>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
           <Alert onClose={handleClose} severity="success">
-            Successfully selected the following services :{" "}
-            <strong>check it out!</strong>
+            Successfully selected the following services :
+            <strong>{newSelected}</strong>
           </Alert>
         </Snackbar>
       </div>
