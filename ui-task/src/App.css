@@ -8,8 +8,8 @@
   height: 85px;
   width: 3px;
   display: inline-block;
-  margin: 0 0 0 20%;
   position: relative;
+  left: 20%;
   vertical-align: middle;
 }
 
@@ -17,7 +17,7 @@
   display: inline-block;
   position: relative;
   top: 25px;
-  left: 10px;
+  left: 21%;
 }
 
 #heading {
@@ -34,6 +34,21 @@
   color: #3282b8;
 }
 
-#button.table {
-  box-shadow: none;
+.ServiceTable {
+  table-layout: auto;
+}
+
+.ServiceTableDiv {
+  position: relative;
+  left: 20%;
+  width: 60%;
+  border-style: solid;
+  border-color: #efefef;
+  border-width: 1px;
+}
+
+.buttonDiv {
+  position: relative;
+  left: 20%;
+  width: 60%;
 }

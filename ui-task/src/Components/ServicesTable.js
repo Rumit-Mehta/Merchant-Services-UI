@@ -1,47 +1,150 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
+import Checkbox from "@material-ui/core/Checkbox";
+import ServicesData from "../Data/ServicesData.json";
+import TableContainer from "@material-ui/core/TableContainer";
 import Paper from "@material-ui/core/Paper";
-import ServiceData from "../Data/ServicesData.json";
+import { borders } from "@material-ui/system";
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
+const StyledTableCell = withStyles((theme) => ({
+  head: {
+    color: theme.palette.primary.main,
+    fontWeight: "bold",
   },
-});
+  body: {
+    color: theme.palette.secondary.main,
+  },
+}))(TableCell);
 
-/*const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];*/
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+    "&:nth-of-type(odd)": {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
 
-export default function SimpleTable() {
+function EnhancedTableHead(props) {
+  const { onSelectAllClick, numSelected, rowCount } = props;
+
   return (
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell>Tickbox</TableCell>
-          <TableCell>Service</TableCell>
-          <TableCell>Description</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {ServiceData.map((row) => (
-          <TableRow>
-            <TableCell>{row.isChecked}</TableCell>
-            <TableCell>{row.service}</TableCell>
-            <TableCell>{row.description}</TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <TableHead>
+      <TableRow>
+        <StyledTableCell padding="checkbox">
+          <Checkbox
+            color="primary"
+            indeterminate={numSelected > 0 && numSelected < rowCount}
+            checked={rowCount > 0 && numSelected === rowCount}
+            onChange={onSelectAllClick}
+          />
+        </StyledTableCell>
+        <StyledTableCell align={"left"} padding={"default"}>
+          Service
+        </StyledTableCell>
+        <StyledTableCell align={"left"} padding={"default"}>
+          Description
+        </StyledTableCell>
+      </TableRow>
+    </TableHead>
+  );
+}
+
+export default function EnhancedTable() {
+  const [selected, setSelected] = React.useState([]);
+  const [page] = React.useState(0);
+  const [dense] = React.useState(false);
+  const [rowsPerPage] = React.useState(5);
+
+  const handleSelectAllClick = (event) => {
+    if (event.target.checked) {
+      const newSelecteds = ServicesData.map((n) => n.name);
+      setSelected(newSelecteds);
+      return;
+    }
+    setSelected([]);
+  };
+
+  const handleClick = (event, name) => {
+    const selectedIndex = selected.indexOf(name);
+    let newSelected = [];
+    if (selectedIndex === -1) {
+      newSelected = newSelected.concat(selected, name);
+    } else if (selectedIndex === 0) {
+      newSelected = newSelected.concat(selected.slice(1));
+    } else if (selectedIndex === selected.length - 1) {
+      newSelected = newSelected.concat(selected.slice(0, -1));
+    } else if (selectedIndex > 0) {
+      newSelected = newSelected.concat(
+        selected.slice(0, selectedIndex),
+        selected.slice(selectedIndex + 1)
+      );
+    }
+
+    setSelected(newSelected);
+  };
+
+  const isSelected = (name) => selected.indexOf(name) !== -1;
+
+  const emptyRows =
+    rowsPerPage -
+    Math.min(rowsPerPage, ServicesData.length - page * rowsPerPage);
+
+  return (
+    <div>
+      <Paper elevation={0} square={false}>
+        <TableContainer>
+          <Table
+            className="ServiceTable"
+            aria-labelledby="tableTitle"
+            size={dense ? "small" : "medium"}
+            aria-label="enhanced table"
+          >
+            <EnhancedTableHead
+              numSelected={selected.length}
+              onSelectAllClick={handleSelectAllClick}
+              rowCount={ServicesData.length}
+            />
+            <TableBody>
+              {ServicesData.map((row, index) => {
+                const isItemSelected = isSelected(row.name);
+                const labelId = `enhanced-table-checkbox-${index}`;
+
+                return (
+                  <TableRow
+                    hover
+                    onClick={(event) => handleClick(event, row.name)}
+                    role="checkbox"
+                    aria-checked={isItemSelected}
+                    selected={isItemSelected}
+                  >
+                    <StyledTableCell padding="checkbox">
+                      <Checkbox
+                        color="primary"
+                        checked={isItemSelected}
+                        inputProps={{ "aria-labelledby": labelId }}
+                      />
+                    </StyledTableCell>
+                    <StyledTableCell id={labelId} padding="default">
+                      {row.name}
+                    </StyledTableCell>
+                    <TableCell align="left">{row.description}</TableCell>
+                  </TableRow>
+                );
+              })}
+              {emptyRows > 0 && (
+                <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
+                  <TableCell colSpan={6} />
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Paper>
+    </div>
   );
 }

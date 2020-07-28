@@ -10,24 +10,11 @@ function App() {
   return (
     <div>
       <Heading />
-      <ButtonTable elevation={0} />
-      <ServicesTable
-        data={[]}
-        header={[
-          {
-            name: "id",
-            prop: "id",
-          },
-          {
-            name: "Service",
-            prop: "service",
-          },
-          {
-            name: "Description",
-            prop: "description",
-          },
-        ]}
-      />
+
+      <div className="ServiceTableDiv">
+        <ServicesTable />
+      </div>
+      <ButtonTable />
     </div>
   );
 }

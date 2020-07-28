@@ -10,27 +10,21 @@ import Paper from "@material-ui/core/Paper";
 import CancelButton from "./CancelButton";
 import SubmitButton from "./AssignServicesButton";
 
-const StyledTableCell = withStyles((theme) => ({
-  body: {
-    color: "red",
-  },
-}))(TableCell);
-
-export default function SimpleTable() {
+export default function buttonTable() {
   return (
-    <TableContainer component={Paper}>
-      <Table id="button.table" aria-label="simple table">
+    <div className="buttonDiv">
+      <Table id="button.table">
         <TableBody>
           <TableRow>
-            <StyledTableCell align="center">
+            <TableCell align="left">
               <CancelButton />
-            </StyledTableCell>
-            <StyledTableCell align="center">
+            </TableCell>
+            <TableCell align="right">
               <SubmitButton />
-            </StyledTableCell>
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>
-    </TableContainer>
+    </div>
   );
 }
