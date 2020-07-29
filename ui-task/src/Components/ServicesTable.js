@@ -22,14 +22,6 @@ const StyledTableCell = withStyles((theme) => ({
   },
 }))(TableCell);
 
-const StyledTableRow = withStyles((theme) => ({
-  root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
-    },
-  },
-}))(TableRow);
-
 function EnhancedTableHead(props) {
   const { onSelectAllClick, numSelected, rowCount } = props;
 
@@ -117,6 +109,7 @@ export default function EnhancedTable() {
 
                 return (
                   <TableRow
+                    key={row.id}
                     hover
                     onClick={(event) => handleClick(event, row.name)}
                     role="checkbox"
