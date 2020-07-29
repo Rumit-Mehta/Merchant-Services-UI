@@ -44,6 +44,7 @@ export default function SimpleSnackbar() {
     firstExcluded: true,
   });
   const wrapperStyles = usePushingGutterStyles();
+
   return (
     <div className={mainStyles.parent}>
       <div className={wrapperStyles.parent}>

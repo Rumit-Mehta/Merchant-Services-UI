@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "name": "Service 1",
+    "name": "Consulting ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
     "isChecked": false
   },
   {
     "id": 2,
-    "name": "Service 2",
+    "name": "Adivce ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
     "isChecked": false
   },
   {
     "id": 3,
-    "name": "Service 3",
+    "name": "Billing ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
     "isChecked": false
   },
   {
     "id": 4,
-    "name": "Service 4",
+    "name": "Disputes ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
     "isChecked": false
   },
   {
     "id": 5,
-    "name": "Service 5",
+    "name": "Transactions ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
     "isChecked": false
   }
