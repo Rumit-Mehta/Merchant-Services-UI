@@ -55,9 +55,13 @@ export default function EnhancedTable() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = ServicesData.map((n) => n.name);
+      const newSelecteds = ServicesData.map((service) => service.name);
+      newSelected.length = 5;
+      console.log("im here");
       setSelected(newSelecteds);
       return;
+    } else {
+      newSelected.length = 0;
     }
     setSelected([]);
   };

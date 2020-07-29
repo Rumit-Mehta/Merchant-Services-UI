@@ -9,13 +9,13 @@ import { newSelected } from "./ServicesTable";
 function displayServices() {
   let servicesSelected = [];
   if (newSelected.length === 0) {
-    servicesSelected.push("No service selected");
+    return "No service selected";
   } else if (newSelected.length === 5) {
-    servicesSelected.push("All services selected");
+    return "All services selected";
   } else {
     servicesSelected = newSelected;
   }
-  return servicesSelected;
+  return "Selected the following services : " + servicesSelected;
 }
 
 function snackbarColor() {
@@ -58,8 +58,7 @@ export default function SimpleSnackbar() {
         </Button>
         <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
           <Alert onClose={handleClose} severity={snackbarColor()}>
-            Successfully selected the following services :
-            <strong>{displayServices()}</strong>
+            {displayServices()}
           </Alert>
         </Snackbar>
       </div>
