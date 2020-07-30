@@ -1,10 +1,17 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { useTwitterBtnStyles } from "@mui-treasury/styles/button/twitter";
-import { usePushingGutterStyles } from "@mui-treasury/styles/gutter/pushing";
 import { Alert } from "@material-ui/lab";
 import Snackbar from "@material-ui/core/Snackbar";
 import { newSelected } from "./ServicesTable";
+
+const styles = {
+  background: "#1176b6",
+  borderRadius: 100,
+  border: 0,
+  color: "white",
+  height: 48,
+  padding: "0 30px",
+};
 
 function displayServices() {
   let servicesSelected = [];
@@ -15,7 +22,7 @@ function displayServices() {
   } else {
     servicesSelected = newSelected;
   }
-  return "Selected the following services : " + servicesSelected;
+  return "Selected : " + servicesSelected;
 }
 
 function snackbarColor() {
@@ -37,32 +44,16 @@ export default function SimpleSnackbar() {
     setOpen(false);
   };
 
-  const styles = useTwitterBtnStyles();
-  const mainStyles = usePushingGutterStyles({
-    cssProp: "marginTop",
-    space: 2,
-    firstExcluded: true,
-  });
-  const wrapperStyles = usePushingGutterStyles();
-
   return (
-    <div className={mainStyles.parent}>
-      <div className={wrapperStyles.parent}>
-        <Button
-          classes={styles}
-          variant={"contained"}
-          color={"primary"}
-          size={"large"}
-          onClick={handleClick}
-        >
-          Assign Services
-        </Button>
-        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity={snackbarColor()}>
-            {displayServices()}
-          </Alert>
-        </Snackbar>
-      </div>
+    <div>
+      <Button style={styles} onClick={handleClick}>
+        Assign Services
+      </Button>
+      <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity={snackbarColor()}>
+          {displayServices()}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }

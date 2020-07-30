@@ -1,9 +1,22 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { useTwitterBtnStyles } from "@mui-treasury/styles/button/twitter";
-import { usePushingGutterStyles } from "@mui-treasury/styles/gutter/pushing";
 import { Alert } from "@material-ui/lab";
 import Snackbar from "@material-ui/core/Snackbar";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiButton: {
+      outlined: {
+        borderRadius: 25,
+      },
+      outlinedPrimary: {
+        borderColor: "#1176b6",
+        color: "#1176b6",
+      },
+    },
+  },
+});
 
 export default function SimpleSnackbar() {
   const [open, setOpen] = React.useState(false);
@@ -16,21 +29,12 @@ export default function SimpleSnackbar() {
     setOpen(false);
   };
 
-  const styles = useTwitterBtnStyles();
-  const mainStyles = usePushingGutterStyles({
-    cssProp: "marginTop",
-    space: 2,
-    firstExcluded: true,
-  });
-  const wrapperStyles = usePushingGutterStyles();
-
   return (
-    <div className={mainStyles.parent}>
-      <div className={wrapperStyles.parent}>
+    <MuiThemeProvider theme={theme}>
+      <div>
         <Button
-          classes={styles}
-          variant={"outlined"}
-          color={"primary"}
+          variant="outlined"
+          color="primary"
           size={"large"}
           onClick={handleClick}
         >
@@ -42,6 +46,6 @@ export default function SimpleSnackbar() {
           </Alert>
         </Snackbar>
       </div>
-    </div>
+    </MuiThemeProvider>
   );
 }
