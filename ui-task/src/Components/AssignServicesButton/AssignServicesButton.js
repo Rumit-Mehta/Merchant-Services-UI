@@ -54,7 +54,7 @@ export default function SimpleSnackbar() {
   };
 
   return (
-    <div>
+    <div data-testid="assignServiceButton">
       <Button style={styles} onClick={handleClick}>
         Assign Services
       </Button>
