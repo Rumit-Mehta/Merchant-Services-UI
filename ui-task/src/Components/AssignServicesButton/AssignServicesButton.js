@@ -2,7 +2,13 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import { Alert } from "@material-ui/lab";
 import Snackbar from "@material-ui/core/Snackbar";
-import { newSelected } from "./ServicesTable";
+import { newSelected } from "../ServicesTable";
+import serviceData from "../../Data/ServicesData.json";
+
+let maxServices = 0;
+serviceData.map((element) => {
+  maxServices++;
+});
 
 const styles = {
   background: "#1176b6",
@@ -17,7 +23,7 @@ function displayServices() {
   let servicesSelected = [];
   if (newSelected.length === 0) {
     return "No service selected";
-  } else if (newSelected.length === 5) {
+  } else if (newSelected.length === maxServices) {
     return "All services selected";
   } else {
     servicesSelected = newSelected;
@@ -41,6 +47,9 @@ export default function SimpleSnackbar() {
   };
 
   const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
     setOpen(false);
   };
 

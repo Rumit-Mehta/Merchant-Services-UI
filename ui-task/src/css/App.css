@@ -45,6 +45,7 @@
   border-style: solid;
   border-color: #efefef;
   border-width: 1px;
+  height: auto;
 }
 
 .buttonDiv {

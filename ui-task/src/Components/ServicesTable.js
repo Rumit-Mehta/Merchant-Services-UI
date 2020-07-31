@@ -11,6 +11,11 @@ import TableContainer from "@material-ui/core/TableContainer";
 import Paper from "@material-ui/core/Paper";
 
 let newSelected = [];
+let maxServices = 0;
+
+ServicesData.map((element) => {
+  maxServices++;
+});
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -56,7 +61,7 @@ export default function EnhancedTable() {
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
       const newSelecteds = ServicesData.map((service) => service.name);
-      newSelected.length = 5;
+      newSelected.length = maxServices;
       console.log("im here");
       setSelected(newSelecteds);
       return;
