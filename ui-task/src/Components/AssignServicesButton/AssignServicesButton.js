@@ -54,8 +54,12 @@ export default function SimpleSnackbar() {
   };
 
   return (
-    <div data-testid="assignServiceButton">
-      <Button style={styles} onClick={handleClick}>
+    <div data-testid="assignServiceDiv" className="serviceDiv">
+      <Button
+        className="assignServiceButton"
+        style={styles}
+        onClick={handleClick}
+      >
         Assign Services
       </Button>
       <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>

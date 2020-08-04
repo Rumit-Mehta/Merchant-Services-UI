@@ -31,7 +31,7 @@ export default function SimpleSnackbar() {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <div>
+      <div data-testid="cancelButtonDiv">
         <Button
           variant="outlined"
           color="primary"
