@@ -1,9 +1,9 @@
 import React from "react";
-import "./css/App.css";
-import Heading from "./Components/Heading";
-import ButtonTable from "./Components/ButtonTable/ButtonTable";
-import ServicesTable from "./Components/ServicesTable/ServicesTable";
-import ClientTable from "./Components/ClientTable/ClientTable";
+import "../css/App.css";
+import Heading from "../Components/Heading/Heading";
+import ButtonTable from "../Components/ButtonTable/ButtonTable";
+import ServicesTable from "../Components/ServicesTable/ServicesTable";
+import ClientTable from "../Components/ClientTable/ClientTable";
 
 function App() {
   return (

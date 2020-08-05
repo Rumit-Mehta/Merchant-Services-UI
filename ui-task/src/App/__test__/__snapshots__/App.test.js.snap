@@ -1,0 +1,615 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    className="headingDiv"
+  >
+    <div
+      className="headingAccent"
+    />
+    <div
+      className="headingText"
+    >
+      <h1
+        data-testid="headingId"
+        id="heading"
+      >
+        Assign services
+      </h1>
+      <h2
+        data-testid="subheadingId"
+        id="subheading"
+      >
+        Set up client
+      </h2>
+    </div>
+  </div>
+  <h2
+    className="subHeading"
+  >
+    Client Details
+  </h2>
+  <div
+    className="ServiceTableDiv"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation0 MuiPaper-rounded"
+    >
+      <div
+        className="MuiTableContainer-root"
+      >
+        <table
+          aria-label="simple table"
+          className="MuiTable-root makeStyles-table-1"
+          role={null}
+        >
+          <tbody
+            className="MuiTableBody-root"
+            role={null}
+          >
+            <tr
+              className="MuiTableRow-root"
+              role={null}
+            >
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3"
+                role="cell"
+                scope="row"
+              >
+                <strong>
+                  Client Name
+                </strong>
+              </th>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignLeft"
+              >
+                Corporation Name
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root"
+              role={null}
+            >
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3"
+                role="cell"
+                scope="row"
+              >
+                <strong>
+                  Client Id
+                </strong>
+              </th>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-3 MuiTableCell-alignLeft"
+              >
+                000001
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h2
+    className="subHeading"
+  >
+    Merchant Services
+  </h2>
+  <div
+    className="ServiceTableDiv"
+  >
+    <div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation0 MuiPaper-rounded"
+      >
+        <div
+          className="MuiTableContainer-root"
+        >
+          <table
+            aria-label="enhanced table"
+            aria-labelledby="tableTitle"
+            className="MuiTable-root ServiceTable"
+            role={null}
+          >
+            <thead
+              className="MuiTableHead-root"
+              role={null}
+            >
+              <tr
+                className="MuiTableRow-root MuiTableRow-head"
+                role={null}
+              >
+                <th
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-4 column MuiTableCell-paddingCheckbox"
+                  scope="col"
+                >
+                  <span
+                    aria-disabled={false}
+                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary"
+                    onBlur={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={null}
+                  >
+                    <span
+                      className="MuiIconButton-label"
+                    >
+                      <input
+                        checked={false}
+                        className="PrivateSwitchBase-input-9"
+                        data-indeterminate={false}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </th>
+                <th
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-4 column MuiTableCell-alignLeft"
+                  scope="col"
+                >
+                  Service
+                </th>
+                <th
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-4 column MuiTableCell-alignLeft"
+                  scope="col"
+                >
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="MuiTableBody-root"
+              role={null}
+            >
+              <tr
+                aria-checked={false}
+                className="MuiTableRow-root MuiTableRow-hover"
+                onClick={[Function]}
+                role="checkbox"
+              >
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5 MuiTableCell-paddingCheckbox"
+                >
+                  <span
+                    aria-disabled={false}
+                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary"
+                    onBlur={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={null}
+                  >
+                    <span
+                      className="MuiIconButton-label"
+                    >
+                      <input
+                        aria-labelledby="enhanced-table-checkbox-0"
+                        checked={false}
+                        className="PrivateSwitchBase-input-9"
+                        data-indeterminate={false}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5"
+                  id="enhanced-table-checkbox-0"
+                >
+                   Consulting
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                </td>
+              </tr>
+              <tr
+                aria-checked={false}
+                className="MuiTableRow-root MuiTableRow-hover"
+                onClick={[Function]}
+                role="checkbox"
+              >
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5 MuiTableCell-paddingCheckbox"
+                >
+                  <span
+                    aria-disabled={false}
+                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary"
+                    onBlur={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={null}
+                  >
+                    <span
+                      className="MuiIconButton-label"
+                    >
+                      <input
+                        aria-labelledby="enhanced-table-checkbox-1"
+                        checked={false}
+                        className="PrivateSwitchBase-input-9"
+                        data-indeterminate={false}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5"
+                  id="enhanced-table-checkbox-1"
+                >
+                   Adivce
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                </td>
+              </tr>
+              <tr
+                aria-checked={false}
+                className="MuiTableRow-root MuiTableRow-hover"
+                onClick={[Function]}
+                role="checkbox"
+              >
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5 MuiTableCell-paddingCheckbox"
+                >
+                  <span
+                    aria-disabled={false}
+                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary"
+                    onBlur={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={null}
+                  >
+                    <span
+                      className="MuiIconButton-label"
+                    >
+                      <input
+                        aria-labelledby="enhanced-table-checkbox-2"
+                        checked={false}
+                        className="PrivateSwitchBase-input-9"
+                        data-indeterminate={false}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5"
+                  id="enhanced-table-checkbox-2"
+                >
+                   Billing
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                </td>
+              </tr>
+              <tr
+                aria-checked={false}
+                className="MuiTableRow-root MuiTableRow-hover"
+                onClick={[Function]}
+                role="checkbox"
+              >
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5 MuiTableCell-paddingCheckbox"
+                >
+                  <span
+                    aria-disabled={false}
+                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary"
+                    onBlur={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={null}
+                  >
+                    <span
+                      className="MuiIconButton-label"
+                    >
+                      <input
+                        aria-labelledby="enhanced-table-checkbox-3"
+                        checked={false}
+                        className="PrivateSwitchBase-input-9"
+                        data-indeterminate={false}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5"
+                  id="enhanced-table-checkbox-3"
+                >
+                   Disputes
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                </td>
+              </tr>
+              <tr
+                aria-checked={false}
+                className="MuiTableRow-root MuiTableRow-hover"
+                onClick={[Function]}
+                role="checkbox"
+              >
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5 MuiTableCell-paddingCheckbox"
+                >
+                  <span
+                    aria-disabled={false}
+                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-6 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary"
+                    onBlur={[Function]}
+                    onDragLeave={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    tabIndex={null}
+                  >
+                    <span
+                      className="MuiIconButton-label"
+                    >
+                      <input
+                        aria-labelledby="enhanced-table-checkbox-4"
+                        checked={false}
+                        className="PrivateSwitchBase-input-9"
+                        data-indeterminate={false}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <svg
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body WithStyles(ForwardRef(TableCell))-body-5"
+                  id="enhanced-table-checkbox-4"
+                >
+                   Transactions
+                </td>
+                <td
+                  aria-sort={null}
+                  className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="buttonDiv"
+  >
+    <table
+      className="MuiTable-root"
+      id="button.table"
+      role={null}
+    >
+      <tbody
+        className="MuiTableBody-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              data-testid="cancelButtonDiv"
+            >
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-outlinedSizeLarge MuiButton-sizeLarge"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  Cancel
+                </span>
+              </button>
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+          >
+            <div
+              className="serviceDiv"
+              data-testid="assignServiceDiv"
+            >
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-text assignServiceButton"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "background": "#1176b6",
+                    "border": 0,
+                    "borderRadius": 100,
+                    "color": "white",
+                    "height": 48,
+                    "padding": "0 30px",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  Assign Services
+                </span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
