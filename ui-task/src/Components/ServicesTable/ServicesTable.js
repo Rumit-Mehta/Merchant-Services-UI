@@ -6,7 +6,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Checkbox from "@material-ui/core/Checkbox";
-import ServicesData from "../Data/ServicesData.json";
+import ServicesData from "../../Data/ServicesData.json";
 import TableContainer from "@material-ui/core/TableContainer";
 import Paper from "@material-ui/core/Paper";
 
@@ -33,7 +33,7 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        <StyledTableCell padding="checkbox">
+        <StyledTableCell padding="checkbox" className="column">
           <Checkbox
             color="primary"
             indeterminate={numSelected > 0 && numSelected < rowCount}
@@ -41,10 +41,10 @@ function EnhancedTableHead(props) {
             onChange={onSelectAllClick}
           />
         </StyledTableCell>
-        <StyledTableCell align={"left"} padding={"default"}>
+        <StyledTableCell align={"left"} padding={"default"} className="column">
           Service
         </StyledTableCell>
-        <StyledTableCell align={"left"} padding={"default"}>
+        <StyledTableCell align={"left"} padding={"default"} className="column">
           Description
         </StyledTableCell>
       </TableRow>
@@ -151,4 +151,4 @@ export default function EnhancedTable() {
     </div>
   );
 }
-export { newSelected };
+export { newSelected, StyledTableCell };

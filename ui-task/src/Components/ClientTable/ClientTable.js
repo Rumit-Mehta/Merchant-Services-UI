@@ -6,7 +6,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import ClientData from "../Data/ClientData.json";
+import ClientData from "../../Data/ClientData.json";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -17,6 +17,8 @@ const StyledTableCell = withStyles((theme) => ({
     color: theme.palette.common.black,
   },
 }))(TableCell);
+
+export { StyledTableCell };
 
 const useStyles = makeStyles({
   table: {

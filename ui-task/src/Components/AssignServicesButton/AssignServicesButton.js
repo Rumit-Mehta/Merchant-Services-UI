@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import { Alert } from "@material-ui/lab";
 import Snackbar from "@material-ui/core/Snackbar";
-import { newSelected } from "../ServicesTable";
+import { newSelected } from "../ServicesTable/ServicesTable";
 import serviceData from "../../Data/ServicesData.json";
 
 let maxServices = 0;
