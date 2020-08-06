@@ -5,11 +5,13 @@ import Snackbar from "@material-ui/core/Snackbar";
 import { newSelected } from "../ServicesTable/ServicesTable";
 import serviceData from "../../Data/ServicesData.json";
 
+// Code to find the maximum amount of services got from ServiceData.json file
 let maxServices = 0;
 serviceData.map((element) => {
   maxServices++;
 });
 
+// button style
 const styles = {
   background: "#1176b6",
   borderRadius: 100,
@@ -19,6 +21,7 @@ const styles = {
   padding: "0 30px",
 };
 
+// Function that displays different messages on the snackbar depending on the amount of options selected
 function displayServices() {
   let servicesSelected = [];
   if (newSelected.length === 0) {
@@ -31,6 +34,7 @@ function displayServices() {
   return "Selected : " + servicesSelected;
 }
 
+// Function that changes the snackbar colour to red (error) if no options are selected
 function snackbarColor() {
   if (newSelected.length === 0) {
     return "error";
@@ -39,6 +43,7 @@ function snackbarColor() {
   }
 }
 
+// Default function, returns button with onclick and snackbar functionality
 export default function SimpleSnackbar() {
   const [open, setOpen] = React.useState(false);
 

@@ -1,0 +1,47 @@
+                                    COMPONENTS
+
+1. Index (Page)
+2.  -> App
+3.      -> Heading
+4.      -> ClientDetails Table
+5.      -> Merchant Services Table
+6.      -> Button Table
+7.          -> Cancel Button
+8.          -> Accept Services Button
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                                    USER STORIES
+
+#1. As a:       User
+    I want to:  See the heading and subheading of the page
+    so that:    I know what page im on.
+
+#2. As a:       User
+    I want to:  See my organisation name and id on the page
+    so that:    I know that my organisation is selected
+
+#3. As a:       User
+    I want to:  See the list of possible services on the page
+    so that:    I know what services I can selected
+
+#4. As a:       User
+    I want to:  Have a cancel button
+    so that:    I can go back to the previous page incase I change my mind
+
+#5. As a:       User
+    I want to:  Have a submit button 
+    so that:    I can submit the services selected onto the server.
+
+#6. As a:       User
+    I want to:  Be able to select a service by clicking on the row
+    so that:    I can select that service to submit on the server
+
+#7. As a:       User
+    I want to:  Be able to select all services by clicking on the heading checkbox
+    so that:    I can submit the services selected onto the server.
+
+#8. As a:       User
+    I want to:  Have a consistant colour pallete
+    so that:    The website looks proffessional.
+
+

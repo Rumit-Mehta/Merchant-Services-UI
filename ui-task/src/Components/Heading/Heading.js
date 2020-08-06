@@ -1,5 +1,7 @@
 import React from "react";
 
+// Const that combines the heading, subheading and blue accent into 1 componenent which can
+// then be exported
 const Heading = () => {
   return (
     <div className="headingDiv">

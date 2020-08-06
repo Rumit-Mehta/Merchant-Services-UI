@@ -4,6 +4,8 @@ import { Alert } from "@material-ui/lab";
 import Snackbar from "@material-ui/core/Snackbar";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
+// This const overides the current theme and adds colours to the outline and the text aswell
+// as making the button round
 const theme = createMuiTheme({
   overrides: {
     MuiButton: {
@@ -18,6 +20,8 @@ const theme = createMuiTheme({
   },
 });
 
+// Default function that returns a button with onclick and snackbar functionality. In this case
+// the snackbar is only returning a default string with the blue (info) colour
 export default function SimpleSnackbar() {
   const [open, setOpen] = React.useState(false);
 

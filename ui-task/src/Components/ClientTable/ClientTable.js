@@ -8,6 +8,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import ClientData from "../../Data/ClientData.json";
 
+// const which overrides the TableCell style making the font bold and colour black
 const StyledTableCell = withStyles((theme) => ({
   head: {
     color: theme.palette.primary.main,
@@ -18,14 +19,17 @@ const StyledTableCell = withStyles((theme) => ({
   },
 }))(TableCell);
 
-export { StyledTableCell };
-
+// min width of table is 650, if screen is too small -> automatically adds scrollbar
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
 });
 
+export { StyledTableCell };
+
+// Default function that returns a table with 2 rows and 2 columns
+// This table displays the current clientName and clientId selected
 export default function SimpleTable() {
   const classes = useStyles();
 
