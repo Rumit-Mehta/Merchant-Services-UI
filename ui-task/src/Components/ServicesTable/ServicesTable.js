@@ -9,15 +9,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import ServicesData from "../../Data/ServicesData.json";
 import TableContainer from "@material-ui/core/TableContainer";
 import Paper from "@material-ui/core/Paper";
-
-// Initialize variables
-let newSelected = [];
-let maxServices = 0;
-
-// Find the max services available from the ServicesData.json file
-ServicesData.map((element) => {
-  maxServices++;
-});
+import Functions from "./Functions";
 
 // Overiding 'TableCell' style by making the font bold and changing the colour.
 const StyledTableCell = withStyles((theme) => ({
@@ -33,7 +25,6 @@ const StyledTableCell = withStyles((theme) => ({
 // Function which creates the table headers. 3 columns: checkbox, Service, Description
 function EnhancedTableHead(props) {
   const { onSelectAllClick, numSelected, rowCount } = props;
-
   return (
     <TableHead>
       <TableRow>
@@ -58,53 +49,14 @@ function EnhancedTableHead(props) {
 
 // Default function which generates the body of the table as well handle to checkboxes
 export default function EnhancedTable() {
-  const [selected, setSelected] = React.useState([]);
-  const [page] = React.useState(0);
-  const [dense] = React.useState(false);
-  const [rowsPerPage] = React.useState(5);
-
-  // function that deals with what happens when the "select all" checkbox is ticked
-  // If not already selected: it changes length of selected service to max amount of services and selects all services.
-  // If already selected: it changes length of selected service to 0 and un-selects the services
-  const handleSelectAllClick = (event) => {
-    if (event.target.checked) {
-      const newSelecteds = ServicesData.map((service) => service.name);
-      newSelected.length = maxServices;
-      setSelected(newSelecteds);
-      return;
-    } else {
-      newSelected.length = 0;
-    }
-    setSelected([]);
-  };
-
-  // This code handles the selection of each checkbox
-  const handleClick = (event, name) => {
-    newSelected = [];
-    const selectedIndex = selected.indexOf(name);
-    if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
-    } else if (selectedIndex === 0) {
-      newSelected = newSelected.concat(selected.slice(1));
-    } else if (selectedIndex === selected.length - 1) {
-      newSelected = newSelected.concat(selected.slice(0, -1));
-    } else if (selectedIndex > 0) {
-      newSelected = newSelected.concat(
-        selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1)
-      );
-    }
-    console.log(newSelected);
-    setSelected(newSelected);
-  };
-
-  const isSelected = (name) => selected.indexOf(name) !== -1;
-
-  // const to find the amount of empty rows in the table
-  const emptyRows =
-    rowsPerPage -
-    Math.min(rowsPerPage, ServicesData.length - page * rowsPerPage);
-
+  const {
+    dense,
+    emptyRows,
+    handleClick,
+    handleSelectAllClick,
+    isSelected,
+    selected,
+  } = Functions();
   // This is the main body of the table, and goes through the json file to add each service onto the table
   return (
     <div>
@@ -161,4 +113,4 @@ export default function EnhancedTable() {
     </div>
   );
 }
-export { newSelected, StyledTableCell };
+export { StyledTableCell };

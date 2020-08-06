@@ -540,6 +540,7 @@ exports[`matches snapshot 1`] = `
               <button
                 className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-outlinedSizeLarge MuiButton-sizeLarge"
                 disabled={false}
+                id="CancelButton"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onDragLeave={[Function]}

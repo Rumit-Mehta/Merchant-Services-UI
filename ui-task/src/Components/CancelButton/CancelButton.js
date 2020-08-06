@@ -22,30 +22,25 @@ const theme = createMuiTheme({
 
 // Default function that returns a button with onclick and snackbar functionality. In this case
 // the snackbar is only returning a default string with the blue (info) colour
-export default function SimpleSnackbar() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (event, reason) => {
-    setOpen(false);
-  };
-
+export default function SimpleSnackbar(prop) {
   return (
     <MuiThemeProvider theme={theme}>
       <div data-testid="cancelButtonDiv">
         <Button
+          id="CancelButton"
           variant="outlined"
           color="primary"
           size={"large"}
-          onClick={handleClick}
+          onClick={prop.handleClick}
         >
           Cancel
         </Button>
-        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity="info">
+        <Snackbar
+          open={prop.open}
+          autoHideDuration={3000}
+          onClose={prop.handleClose}
+        >
+          <Alert onClose={prop.handleClose} severity="info">
             Going back to previous page
           </Alert>
         </Snackbar>

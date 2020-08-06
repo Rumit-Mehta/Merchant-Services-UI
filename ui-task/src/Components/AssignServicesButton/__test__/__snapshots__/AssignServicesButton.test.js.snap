@@ -1,43 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
-<div
-  className="serviceDiv"
-  data-testid="assignServiceDiv"
->
-  <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-text assignServiceButton"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={
-      Object {
-        "background": "#1176b6",
-        "border": 0,
-        "borderRadius": 100,
-        "color": "white",
-        "height": 48,
-        "padding": "0 30px",
-      }
-    }
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiButton-label"
-    >
-      Assign Services
-    </span>
-  </button>
-</div>
-`;
+exports[`Tests for Assign Service Button matches snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Tests for Assign Service Button matches snapshot 2`] = `ShallowWrapper {}`;

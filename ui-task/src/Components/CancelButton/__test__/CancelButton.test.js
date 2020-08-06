@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import CancelButton from "../CancelButton";
-import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import renderer from "react-test-renderer";
-
-afterEach(cleanup);
+import { shallow } from "enzyme";
 
 describe("Tests for Cancel Button", () => {
   test("renders  without crashing", () => {
@@ -13,13 +11,19 @@ describe("Tests for Cancel Button", () => {
     ReactDOM.render(<CancelButton></CancelButton>, div);
   });
 
-  test("renderes button correctly", () => {
-    const { getByTestId } = render(<CancelButton></CancelButton>);
-    expect(getByTestId("cancelButtonDiv")).toHaveTextContent("Cancel");
+  const mockClick = jest.fn();
+  const mockCancel = jest.fn();
+  test("matches snapshot", () => {
+    const wrapper = shallow(
+      <CancelButton handleClick={mockClick} handleClose={mockCancel} />
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 
   test("matches snapshot", () => {
-    const tree = renderer.create(<CancelButton />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(
+      <CancelButton open handleClick={mockClick} handleClose={mockCancel} />
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });
